@@ -13,7 +13,7 @@ API Django do projeto Além das Fronteiras.
 docker-compose up --build
 ```
 
-A API estará disponível em `http://localhost:8000`.
+A API estará disponível em `http://127.0.0.1:8000`.
 
 ## Parar
 
