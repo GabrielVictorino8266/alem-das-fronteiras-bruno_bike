@@ -1,0 +1,7 @@
+name: alem-das-fronteiras
+variables:
+  - name: base_url
+    value: https://backend-imigrates-v0.onrender.com/api
+  - name: token
+    value: ""
+    disabled: true
