@@ -16,9 +16,19 @@ http:
   auth: inherit
 
 runtime:
-  variables:
-    - name: token
-      value: ""
+  scripts:
+    - type: after-response
+      code: |-
+        const data = res.getBody();
+        console.log(data);
+
+        if(data.access){
+          bru.setEnvVar("access", data.access);
+        }
+
+        if(data.refresh){
+          bru.setEnvVar("refresh", data.refresh);
+        }
 
 settings:
   encodeUrl: true
